@@ -1,6 +1,6 @@
 package abc;
 
-public class User {
+public class User implements Comparable<User>{
 	private int id;
 	private String code;
 	private String mail;
@@ -11,7 +11,12 @@ public class User {
 		this.mail=mail;
 	}
 	
-
+	@Override
+	public int compareTo(User u){
+		if (id>u.id) return 1;
+		else if (id<u.id) return -1;
+		else return 0;
+	}
 	
 	@Override
 	public int hashCode() {

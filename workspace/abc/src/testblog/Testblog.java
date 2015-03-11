@@ -2,6 +2,8 @@ package testblog;
 
 import java.io.*;
 import java.util.Date;
+
+import blog.Blog;
 import abc.*;
 public class Testblog {
 	public String getInput(){

@@ -1,5 +1,9 @@
-package abc;
+package blog;
 import java.util.ArrayList;
+import java.util.Calendar;
+
+import abc.Post;
+import abc.User;
 
 public class Blog {
 	private User user;
@@ -65,5 +69,19 @@ public class Blog {
 		} else if (!user.equals(other.user))
 			return false;
 		return true;
+	}
+	
+	public void setPosts(ArrayList<Post> allposts){
+		for (Post p:allposts){
+			this.allPosts.add(p);
+		}
+	}
+	public void search(int month, String someone){
+		Calendar cal = Calendar.getInstance();
+		for (Post p : allPosts){
+			cal.setTime(p.getDate());
+			int postMonth = cal.get(Calendar.MONTH);
+			if (postMonth==month-1&&p.contains(someone)) System.out.println(p);
+		}
 	}
 }

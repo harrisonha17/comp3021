@@ -2,7 +2,7 @@ package abc;
 
 import java.util.Date;
 
-public class Post {
+public class Post implements Comparable<Post>{
 	private Date date;
 	private String content;
 
@@ -11,12 +11,20 @@ public class Post {
 		this.content=content;
 	}
 	
+	public int compareTo(Post p){
+		return date.compareTo(p.date);
+	}
+	
 	public String getContent(){
 		return content;
 	}
 	
 	public void setContent(String content){
 		this.content=content;
+	}
+	
+	public Date getDate(){
+		return date;
 	}
 	
 	public String toString(){
