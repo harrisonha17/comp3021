@@ -1,6 +1,8 @@
 package abc;
 
-public class User implements Comparable<User>{
+import java.io.Serializable;
+
+public class User implements Comparable<User>,Serializable{
 	private int id;
 	private String code;
 	private String mail;
@@ -58,5 +60,10 @@ public class User implements Comparable<User>{
 
 	public String toString(){
 		return("User [userId="+id+", userName="+code+", userEmail="+mail);
+	}
+
+	public String getUserName() {
+		// TODO Auto-generated method stub
+		return code;
 	}
 }
