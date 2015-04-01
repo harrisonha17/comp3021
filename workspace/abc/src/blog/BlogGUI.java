@@ -31,7 +31,7 @@ public class BlogGUI implements ActionListener{
 	mainFrame.setLayout(new GridLayout());
 	postTextArea = new JTextArea(20,40);
 	postTextArea.setText("What's on your mind?");
-	postTextArea.setBackground(Color.YELLOW);
+	postTextArea.setBackground(Color.decode("#FFFFE0"));
 	postContent=new JTextField(20);
 	postContent.setEditable(false);
 	postContent.setText("Here is put my posts!");
