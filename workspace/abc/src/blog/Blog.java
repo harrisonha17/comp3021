@@ -69,6 +69,9 @@ public class Blog implements Serializable{
 			System.out.println(p);
 		}
 	}
+	public String listGUI(){
+		return null;
+	}
 	public void delete(int index){
 		if (index>=0&&index<allPosts.size())
 			allPosts.remove(index);
@@ -122,5 +125,8 @@ public class Blog implements Serializable{
 			int postMonth = cal.get(Calendar.MONTH);
 			if (postMonth==month-1&&p.contains(someone)) System.out.println(p);
 		}
+	}
+	public void add(Post newPost) {
+		allPosts.add(newPost);
 	}
 }
